@@ -33,11 +33,33 @@
 
 /* set-up font-family: 'Golos Text'; */
 
+:root {
+    --font-primary: "KyivType Sans", sans-serif;
+    --font-secondary: "Golos Text", sans-serif;
+    --font-tertiary: "GT Eesti Pro Text", sans-serif;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray: #ccc;
+    --color-dark: #3a3a3a;
+    --color-brown: #5d4037;
+    --color-gold: #d4a017;
+    --color-hover-gold: #d4af37;
+    --color-gray-rgba: rgba(255, 255, 255, 0.7);
+    --background-white-rgba: rgba(255, 255, 255, 0.12);
+    --background-black-rgba: rgba(0, 0, 0, 0.1);
+    --background-border-rgba: rgba(255, 255, 255, 0.06);
+    --background-gradient-start: #d4b26f;
+    --background-gradient-end: #a87c25;
+    --background-hover-gradient-start: #a87c25;
+    --background-hover-gradient-end: #d4b26f;
+    --background-video-overlay: rgba(0, 0, 0, 0.4);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "KyivType Sans", sans-serif;
+    font-family: var(--font-primary);
 }
 
 html {
@@ -47,11 +69,13 @@ html {
 .body-wrapper {
     overflow: hidden;
     width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     position: relative;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(0deg, rgba(70, 50, 40, 0.3), rgba(70, 50, 40, 0.3));
+    background: linear-gradient(0deg, var(--background-video-overlay), var(--background-video-overlay)), linear-gradient(0deg, rgba(70, 50, 0, 0.4));
 }
 
 .header {
@@ -59,6 +83,9 @@ html {
     flex-direction: column;
     height: auto;
     padding: 16px 40px;
+    max-width: 90rem;
+        width: 100%;
+        margin: 0 auto;
 }
 
 .header__container {
@@ -104,31 +131,31 @@ html {
     align-items: center;
     text-decoration: none;
     box-sizing: border-box;
-    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 4px 20px 4px 4px;
     gap: 8px;
     width: 166px;
     height: 48px;
-    background: rgba(240, 231, 223, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--background-white-rgba);
+    border: 1px solid var(--background-border-rgba);
     border-radius: 34px;
 }
 
 .header__yandex-button {
     border-radius: 50%;
-    background-color: white;
-    border: 1px solid white;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white);
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .header__rating-block {
     display: flex;
     white-space: nowrap;
-    text-overflow: ellipsis;/
+    text-overflow: ellipsis;
 }
 
 .header__rating-stats {
@@ -145,14 +172,14 @@ html {
     align-items: center;
     padding: 0px;
     gap: 4px;
-    color: white;
+    color: var(--color-white);
 }
 
 .header__reviews {
-    color: #ccc;
+    color: var(--color-gray);
     width: 72px;
     height: 15px;
-    font-family: "KyivType Sans";
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -160,7 +187,7 @@ html {
     display: flex;
     align-items: center;
     letter-spacing: -0.01em;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-gray-rgba);
 }
 
 .header__source {
@@ -169,7 +196,7 @@ html {
     font-size: 12px;
     line-height: 124%;
     letter-spacing: -0.01em;
-    color: white;
+    color: var(--color-white);
 }
 
 .header__top-center {
@@ -192,7 +219,7 @@ html {
 
 .header__social-link {
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--background-black-rgba);
     width: 32px;
     height: 32px;
     display: flex;
@@ -219,8 +246,8 @@ html {
     font-size: 14px;
     line-height: 124%;
     letter-spacing: -0.01em;
-    color: white;
-    font-family: 'KyivType Sans';
+    color: var(--color-white);
+    font-family: var(--font-primary);
 }
 
 .header__appointment-btn {
@@ -230,10 +257,10 @@ html {
     gap: 10px;
     width: 201px;
     height: 40px;
-    background: #ffffff;
-    border: 1px solid #000000;
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
     border-radius: 20px;
-    color: #000000;
+    color: var(--color-dark);
     transition: all ease 0.5s;
     cursor: pointer;
     border: none;
@@ -241,17 +268,11 @@ html {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'Golos Text';
+    font-family: var(--font-secondary);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
-    color: #3A3A3A;
-}
-
-.header__appointment-btn:hover {
-    background: linear-gradient(180deg, #A87C25 -66.86%, #D4B26F 180.08%);
-    font-weight: bold;
 }
 
 .header__bottom {
@@ -260,23 +281,22 @@ html {
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--background-border-rgba);
     border-right: none;
     border-left: none;
 }
 
 .header__nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 120px;
-    color: white;
+    color: var(--color-white);
     width: 100%;
     max-width: 90rem;
     margin: 0 auto;
     height: 50px;
-    font-family: "KyivType Sans", sans-serif;
+    font-family: var(--font-primary);
 }
 
 .header__menu-list {
@@ -288,7 +308,7 @@ html {
 
 .header__menu-link {
     text-decoration: none;
-    font-family: "KyivType Sans";
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -297,15 +317,11 @@ html {
     align-items: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--color-white);
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.header__menu-link:hover {
-    color: #d4a017;
 }
 
 .main {
@@ -342,32 +358,28 @@ html {
     font-size: 60px;
     line-height: 94%;
     letter-spacing: -0.04em;
-    color: #ffffff;
+    color: var(--color-white);
     max-width: 863px;
-    font-family: "GT Eesti Pro Text", sans-serif;
+    font-family: var(--font-tertiary);
 }
 
 .main__hero-subcaption {
-    font-family: "KyivType Sans";
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     letter-spacing: -0.01em;
     font-feature-settings: "ss01" on;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .main__hero-button {
     margin-top: 5px;
     text-decoration: none;
-    background-color: #d4a017;
+    background-color: var(--color-gold);
     border: none;
     padding: 10px 20px;
-    color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -376,43 +388,39 @@ html {
     gap: 15px;
     width: 283px;
     height: 56px;
-    background: linear-gradient(180deg, #D4B26F -66.86%, #A87C25 180.08%);
-    box-shadow: 19px 51px 22px rgba(113, 87, 71, 0.03), 11px 28px 18px rgba(113, 87, 71, 0.1), 5px 13px 13px rgba(113, 87, 71, 0.17), 1px 3px 7px rgba(113, 87, 71, 0.2);
+    background: linear-gradient(180deg, var(--background-gradient-start) -66.86%, var(--background-gradient-end) 180.08%);
+    box-shadow: 19px 51px 22px rgba(113, 87, 71, 0.03), 11px 28px 18px rgba(113, 87, 71, 0.1), 5px 13px 13px rgba(113, 87, 71, 0.1);
     border-radius: 999px;
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'KyivType Sans';
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 124%;
     letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color-white);
+    transition: all 0.3s ease;
 }
 
 .main__hero-button svg {
     margin-right: -10px;
 }
 
-.main__hero-button:hover {
-    background: linear-gradient(180deg, #A87C25 -66.86%, #D4B26F 180.08%);
-    font-weight: bold;
-}
-
 #background-video {
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
     width: auto;
     z-index: -3;
     object-fit: cover;
     border-radius: 0px 0px 16px 16px;
     height: 100vh;
     max-height: 100vh;
+    width: 100%;
+    max-width: 100%;
 }
 
 .main__hero-slider {
@@ -455,19 +463,16 @@ html {
     flex-shrink: 0;
     box-sizing: border-box;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--background-white-rgba);
+    border: 1px solid var(--background-border-rgba);
     backdrop-filter: blur(8px);
     border-radius: 20px;
     align-items: flex-start;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(8px);
 }
 
 .card.active {
     width: 260px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f4e8 100%)
+    background: linear-gradient(135deg, var(--color-white) 0%, #f8f4e8 100%);
 }
 
 .card-header {
@@ -478,7 +483,7 @@ html {
     align-items: center;
     position: relative;
     min-width: 140px;
-    color: white;
+    color: var(--color-white);
 }
 
 .card.active .card-header {
@@ -490,14 +495,14 @@ html {
 .card-number {
     font-size: 24px;
     font-weight: 800;
-    color: white;
+    color: var(--color-white);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: flex-start;
     height: 10px;
-    font-family: 'Golos Text';
+    font-family: var(--font-secondary);
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -506,18 +511,18 @@ html {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--background-black-rgba);
 }
 
 .card-title {
     font-size: 15px;
     font-weight: 700;
-    color: white;
+    color: var(--color-white);
     line-height: 1.4;
     text-align: center;
     transition: opacity 0.3s ease;
     align-self: flex-start;
-    font-family: 'KyivType Sans';
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -525,7 +530,7 @@ html {
     display: flex;
     align-items: center;
     letter-spacing: -0.01em;
-    color: #FFFFFF;
+    color: var(--color-white);
     justify-content: left;
     text-align: left;
     margin-left: 5px;
@@ -576,11 +581,10 @@ html {
     margin-top: 5px;
 }
 
-
 .scroll-segment {
     width: 8.9rem;
     height: 4px;
-    background: rgba(255, 255, 255, 0.12);
+    background: var(--background-white-rgba);
     backdrop-filter: blur(2px);
     border-radius: 32px;
     margin: 0 4px;
@@ -588,7 +592,6 @@ html {
     transition: all 0.3s ease;
     position: relative;
 }
-
 
 .scroll-segment.active {
     width: 16.25rem;
@@ -614,5 +617,18 @@ html {
 
     .scroll-segment {
         width: 40px;
+    }
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .main__hero-button:hover,
+    .header__appointment-btn:hover {
+        background: linear-gradient(180deg, var(--background-hover-gradient-start) -66.86%, var(--background-hover-gradient-end) 180.08%);
+        font-weight: bold;
+    }
+
+    .header__menu-link:hover {
+        color: var(--color-gold);
     }
 }
