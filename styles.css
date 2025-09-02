@@ -84,8 +84,8 @@ html {
     height: auto;
     padding: 16px 40px;
     max-width: 90rem;
-        width: 100%;
-        margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header__container {
@@ -101,12 +101,15 @@ html {
 .header__top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
+    align-items: flex-start;
     max-width: 90rem;
     width: 100%;
     margin: 0 auto;
     height: 104px;
+}
+
+.header__logo {
+    margin-left: 92px;
 }
 
 .body-wrapper__video {
@@ -124,6 +127,8 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
+    align-self: center;
+    margin-top: -25px;
 }
 
 .header__yandex-rating {
@@ -209,28 +214,32 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
+    align-self: normal;
+    margin-top: -30px;
 }
 
 .header__social-links {
     display: flex;
-    gap: 5px;
+    gap: 6px;
+}
+
+.header__social-link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    background: var(--background-white-rgba);
+    border: 1px solid var(--background-border-rgba);
 }
 
 .header__social-link {
-    border-radius: 50%;
-    background-color: var(--background-black-rgba);
     width: 32px;
     height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header__social-link svg {
-    width: 16.46px;
-    height: 16.70px;
-    opacity: 1;
 }
 
 .header__contacts {
@@ -239,8 +248,7 @@ html {
     align-items: center;
 }
 
-.header__contact-phone,
-.header__contact-hours {
+.header__contact-phone {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -248,6 +256,18 @@ html {
     letter-spacing: -0.01em;
     color: var(--color-white);
     font-family: var(--font-primary);
+}
+
+.header__contact-hours {
+    font-family: 'KyivType Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 124%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
 }
 
 .header__appointment-btn {
@@ -630,6 +650,7 @@ html {
 
 
 @media (hover: hover) and (pointer: fine) {
+
     .main__hero-button:hover,
     .header__appointment-btn:hover {
         background: linear-gradient(180deg, var(--background-hover-gradient-start) -66.86%, var(--background-hover-gradient-end) 180.08%);
