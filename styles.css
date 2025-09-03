@@ -743,9 +743,13 @@ html {
 }
 
 
-@media (min-width: 901px) and (max-width: 1150px) {
+@media (min-width: 901px) and (max-width: 1350px) {
 
-    .header__source {
+    .header__top {
+        border-bottom: 1px solid var(--background-border-rgba);
+    }
+
+    .header__bottom {
         display: none;
     }
 
@@ -753,16 +757,25 @@ html {
         display: none;
     }
 
-    .header__bottom {
-        display: none;
-    }
-
     .burger-btn {
         display: block;
     }
+
+    .header__source {
+        display: none;
+    }
 }
 
+
 @media (min-width: 768px) and (max-width: 900px) {
+
+    .stroke {
+        display: none;
+    }
+
+    .header__top {
+        border-bottom: 3px solid var(--background-white-rgba);
+    }
 
     .header__source {
         display: none;
@@ -787,12 +800,83 @@ html {
     .header__appointment-btn {
         display: none;
     }
+
+    .main__hero-caption {
+        font-size: 4rem;
+    }
 }
 
 @media (min-width: 381px) and (max-width: 768px) {
 
+    .stroke {
+        display: none;
+    }
+
+    .header__social-link-wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4.02145px 12px;
+        gap: 20px;
+        width: 44px;
+        height: 36px;
+        border-radius: 90.4826px;
+    }
+
+
+    .main__hero-caption {
+        max-width: 320px;
+        width: 320px;
+        font-weight: 375;
+        font-size: 44px;
+        line-height: 84%;
+        letter-spacing: -0.02em;
+    }
+
+    .main__hero-subcaprion {
+        width: 300px;
+        max-width: 300px;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+    }
+
+    .header__logo {
+        margin-left: 50px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .header__source {
+        display: none;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .header__bottom {
+        display: none;
+    }
+
     .burger-btn {
         display: block;
+    }
+
+    .header__yandex-rating {
+        display: none;
+    }
+
+    .header__appointment-btn {
+        display: none;
     }
 
     .header__menu {
