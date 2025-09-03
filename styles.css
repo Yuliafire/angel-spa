@@ -749,6 +749,10 @@ html {
         position: relative;
     }
 
+    .header.open {
+        background-color: burlywood;
+    }
+
     .header__social-link-wrapper {
         box-sizing: border-box;
         display: flex;
@@ -904,6 +908,9 @@ html {
         width: 100%;
         max-width: 900px;
         position: relative;
+    }
+
+    .header.open {
         background-color: burlywood;
     }
 
@@ -1076,6 +1083,10 @@ html {
         max-width: 768px;
         position: relative;
         padding: 10px;
+    }
+
+    .header.open {
+        background-color: burlywood;
     }
 
     .stroke {
