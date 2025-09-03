@@ -70,14 +70,16 @@ html {
     overflow: hidden;
     width: 100%;
     max-width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     position: relative;
-    max-height: auto;
-    height: auto;
     display: flex;
     flex-direction: column;
     background: linear-gradient(0deg, var(--background-video-overlay), var(--background-video-overlay)), linear-gradient(0deg, rgba(70, 50, 0, 0.4));
     background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -157,6 +159,7 @@ html {
     height: 40px;
     margin-right: 10px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .header__rating-block {
