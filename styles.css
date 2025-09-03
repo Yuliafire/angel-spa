@@ -72,7 +72,7 @@ html {
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    max-height: 100vh;
+    max-height: auto;
     display: flex;
     flex-direction: column;
     background: linear-gradient(0deg, var(--background-video-overlay), var(--background-video-overlay)), linear-gradient(0deg, rgba(70, 50, 0, 0.4));
@@ -317,6 +317,7 @@ html {
     margin: 0 auto;
     height: 50px;
     font-family: var(--font-primary);
+    list-style-type: none;
 }
 
 .header__menu-list {
@@ -331,7 +332,7 @@ html {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 124%;
     display: flex;
     align-items: center;
@@ -340,7 +341,6 @@ html {
     color: var(--color-white);
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 

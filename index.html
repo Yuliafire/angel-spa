@@ -33,7 +33,7 @@
           <div class="header__top">
             <div class="header__top-left">
                 <a
-                href="https://yandex.ru/maps/org/antea_concept/123456789/" /* Replace with actual Yandex URL */
+                href="https://yandex.ru/maps/org/antea_concept/123456789/"
                 target="_blank"
                 class="header__yandex-rating"
               >
@@ -58,16 +58,10 @@
                   </div>
                 </div>
                 </a>
-                <span class="header__source"
-                    >Салон красоты премиального <br />уровня в Ставрополе</span
-                  >
+                <span class="header__source">Салон красоты премиального<br />уровня в Ставрополе</span>
             </div>
             <div class="header__top-center">
-              <img
-                src="./assets/img/Logo.png"
-                alt="Angel Concept Logo"
-                class="header__logo"
-              />
+              <img src="./assets/img/Logo.png" alt="Angel Concept Logo" class="header__logo"/>
             </div>
             <div class="header__top-right">
               <div class="header__social-links">
@@ -116,12 +110,12 @@
                 <span class="header__contact-phone">+7 910 004-46-36</span>
                 <span class="header__contact-hours">Пн–ВС, с 10:00–22:00</span>
               </div>
-              <a href="#" class="header__appointment-btn" role="button"">ЗАПИСЬ НА ПРИЁМ<span class="arrow-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a href='#' class="header__appointment-btn" role="button">ЗАПИСЬ НА ПРИЁМ<span class="arrow-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="-6.10352e-05" width="24" height="24" rx="12" fill="url(#paint0_linear_2452_2349)"/>
                 <path d="M15.8535 16.6604C15.8535 16.7708 15.7639 16.8604 15.6535 16.8604H14.654C14.5436 16.8604 14.454 16.7708 14.454 16.6604V11.0795C14.454 10.9013 14.2386 10.8121 14.1126 10.9381L8.40503 16.6457C8.32693 16.7238 8.20029 16.7238 8.12219 16.6457L7.4148 15.9383C7.33669 15.8602 7.33669 15.7336 7.4148 15.6555L13.1224 9.94787C13.2484 9.82187 13.1591 9.60645 12.981 9.60645H7.40013C7.28968 9.60645 7.20013 9.5169 7.20013 9.40645V8.40605C7.20013 8.2956 7.28968 8.20605 7.40013 8.20605H15.6535C15.7639 8.20605 15.8535 8.2956 15.8535 8.40605V16.6604Z" fill="white"/>
                 <defs>
                 <linearGradient id="paint0_linear_2452_2349" x1="25.7375" y1="-15.3913" x2="25.7375" y2="53.4783" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#CDA658"/>
+                <stop offset="0%" stop-color="#CDA658"/>
                 <stop offset="1" stop-color="#AA7D26"/>
                 </linearGradient>
                 </defs>
@@ -133,8 +127,20 @@
             <nav class="header__nav">
               <ul class="header__menu-list">
                 <li class="header__menu-item">
-                  <a href="#" class="header__menu-link">ВСЕ УСЛУГИ<span></span></a>
-                </li>
+                  <a href="#" class="header__menu-link">
+                    ВСЕ УСЛУГИ <span>
+                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span>
+                  </a>
+                  <!-- <ul class="header__dropdown"> -->
+                    <!-- <li><a href="#" class="header__dropdown-link">Косметология</a></li> -->
+                    <!-- <li><a href="#" class="header__dropdown-link">SPA & THAI</a></li> -->
+                    <!-- <li><a href="#" class="header__dropdown-link">ВЕЛНЕСС-ТЕРАПИЯ</a></li> -->
+                    <!-- <li><a href="#" class="header__dropdown-link">КОРРЕКЦИЯ ФИГУРЫ</a></li> -->
+                  <!-- </ul> -->
+                   </li>
+
                 <li class="header__menu-item">
                   <a href="#" class="header__menu-link">О ЦЕНТРЕ</a>
                 </li>
@@ -167,19 +173,21 @@
           </div>
         </div>
       </header>
-    <section class="main__hero" id="home">
+
+      <main>
+        <section class="main__hero" id="home">
           <div class="main__hero-container">
             <div class="main__hero-content">
-            <h1 class="main__hero-caption">Ангел Concept —<br/>
+            <h1 class="main__hero-caption">Ангел Concept—<br/>
                 центр премиального ухода и косметологии в Ставрополе</h1>
-            <p class="main__hero-subcaption">Место, где вы выбираете заботу о себе как стиль <br />  жизни. Эстетично, профессионально и легко</p>
+            <p class="main__hero-subcaption">Место, где вы выбираете заботу о себе как стиль<br />жизни. Эстетично, профессионально и легко</p>
             <a href="#" class="main__hero-button">подробнее об услугах<span class="arrow-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="24" height="24" rx="12" fill="white"/>
               <path d="M15.7996 15.3993C15.7996 15.6202 15.6205 15.7993 15.3996 15.7993H15.0003C14.7794 15.7993 14.6003 15.6202 14.6003 15.3993V11.2123C14.6003 10.8559 14.1695 10.6774 13.9175 10.9294L9.40662 15.4403C9.25041 15.5965 8.99715 15.5965 8.84094 15.4403L8.55897 15.1583C8.40276 15.0021 8.40276 14.7489 8.55897 14.5926L13.0698 10.0818C13.3218 9.82978 13.1434 9.39893 12.787 9.39893H8.59995C8.37904 9.39893 8.19995 9.21984 8.19995 8.99893V8.59971C8.19995 8.37879 8.37904 8.19971 8.59995 8.19971H15.3996C15.6205 8.19971 15.7996 8.37879 15.7996 8.59971V15.3993Z" fill="#AC873E"/>
               </svg>              
               </span></a>
             </div>
-            <div class="stroke"><img src="./assets/icons/Vector 435.png" alt="stroke"></div>
+            <div class="stroke"><img src="./assets/icons/bg-stroke.png" alt="stroke"></div>
             <div class="main__hero-slider">
               <div class="slider-container">
                 <div class="cards-accordion">
@@ -198,7 +206,7 @@
                             <p class="card-title">Коррекция фигуры и силуэта</p>
                         </div>
                         <div class="card-content">
-                            <img src="./assets/img/slider.png" alt="spa" class="card-image">
+                            <img src="./assets/img/slider-images/img-2.png" alt="spa" class="card-image">
                         </div>
                     </div>
                     <div class="card" data-service="SPA массажи">
@@ -207,7 +215,7 @@
                             <div class="card-title">SPA и европейские массажи</div>
                         </div>
                         <div class="card-content">
-                            <img src="./assets/img/slider.png" alt="spa" class="card-image">
+                            <img src="./assets/img/slider-images/img-3.png" alt="spa" class="card-image">
                         </div>
                     </div>
                     <div class="card" data-service="Wellness программы">
@@ -216,7 +224,7 @@
                             <div class="card-title">Wellness-программы и флоатация</div>
                         </div>
                         <div class="card-content">
-                            <img src="./assets/img/slider.png" alt="spa" class="card-image">
+                            <img src="./assets/img/slider-images/img-4.png" alt="spa" class="card-image">
                         </div>
                     </div>
                     <div class="card" data-service="Beauty услуги">
@@ -225,7 +233,7 @@
                             <div class="card-title">Beauty-услуги: волосы, ногти, макияж</div>
                         </div>
                         <div class="card-content">
-                            <img src="./assets/img/slider.png" alt="spa" class="card-image">
+                            <img src="./assets/img/slider-images/img-6.png" alt="spa" class="card-image">
                         </div>
                     </div>
                     <div class="card" data-service="экзотические массажи">
@@ -234,7 +242,7 @@
                             <div class="card-title">Тайские и балтийские массажи</div>
                         </div>
                         <div class="card-content">
-                            <img src="./assets/img/slider.png"alt="spa" class="card-image">
+                            <img src="./assets/img/slider-images/img-7.png" alt="spa" class="card-image">
                         </div>
                     </div>
                 </div>
@@ -251,7 +259,7 @@
           </div>
         </section> 
       </main>
-      <script src="./index.js"></script>
-    </div>
+     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
