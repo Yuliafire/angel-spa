@@ -261,7 +261,7 @@ html {
 }
 
 .header__contact-hours {
-    font-family: 'KyivType Sans';
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -651,7 +651,6 @@ html {
     }
 }
 
-
 .service-info {
     text-align: center;
     margin-top: 20px;
@@ -750,8 +749,25 @@ html {
         position: relative;
     }
 
+    .header__social-link-wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4.02145px 12px;
+        gap: 20px;
+        width: 44px;
+        height: 36px;
+        border-radius: 90.4826px;
+    }
+
     .header__top {
-        border-bottom: 1px solid var(--background-border-rgba);
+        border-bottom: 3px solid var(--background-border-rgba);
+    }
+
+    .header__source {
+        display: none;
     }
 
     .header__contacts {
@@ -762,32 +778,28 @@ html {
         display: block;
     }
 
-    .header__source {
-        display: none;
-    }
-
     .header__bottom {
         width: 100%;
         max-width: 1350px;
+
     }
 
     .header__nav {
         position: fixed;
         right: 0;
         visibility: hidden;
-        /* right: -100%; */
-        top: 4rem;
-        z-index: 2000;
+        right: -100%;
+        z-index: 5;
         margin: 0 auto;
         transition: transform 0.5s ease, visibility 0.5s ease;
         will-change: transfrom;
         width: 100%;
         max-width: 1350px;
-        height: calc(100vh - 4rem);
+        height: 700px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 0px;
         gap: 48px;
     }
@@ -796,11 +808,11 @@ html {
         top: 104px;
         display: flex;
         visibility: visible;
-        /* transform: translateX(-100%); */
+        transform: translateX(-100%);
         position: absolute;
         z-index: 1000;
-        background-color: var(--color-white);
-        border: 1px solid var(--color-white);
+        background-color: #FAF5F0;
+        border-radius: 0px 0px 16px 16px;
     }
 
     .header.open .header__nav .header__menu-list {
@@ -812,84 +824,108 @@ html {
         margin: 0 auto;
     }
 
-    .header.open .header__nav .header__menu-link {
-        color: black;
+    .header.open .header__nav .header__menu-item {
+        background: #FAF5F0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0px;
+        gap: 8px;
+        width: 350px;
+        border-bottom: 1px solid rgba(172, 135, 62, 0.2);
     }
 
-        .header__menu-list {
-            display: flex;
-            list-style-type: none;
-            justify-content: space-between;
-            width: 100%;
-        }
-    
-        .header__menu-item:nth-child(10) {
-            /* "КОНТАКТЫ" */
-            /* order: 1; */
-            display: none;
-        }
-    
-        .header__menu-item:nth-child(1) {
-            /* "ВСЕ УСЛУГИ" */
-            /* order: 2; */
+    .header.open .header__nav .header__menu-link {
+        color: #AE8F78;
+    }
 
-            display: none;
-        }
-    
-        .header__menu-item:nth-child(2) {
-            /* "О ЦЕНТРЕ" */
-            order: 6;
-        }
-    
-        .header__menu-item:nth-child(3) {
-            /* "КОСМЕТОЛОГИЯ" */
-            order: 4;
-        }
-    
-        .header__menu-item:nth-child(4) {
-            /* "SPA & THAI" */
-            /* order: 5; */
-            display: none;
-        }
-    
-        .header__menu-item:nth-child(5) {
-            /* "ВЕЛНЕСС-ТЕРАПИЯ" */
-            order: 2;
-        }
-    
-        .header__menu-item:nth-child(6) {
-            /* "SPA & РЕЛАКС" */
-            order: 1;
-        }
-    
-        .header__menu-item:nth-child(7) {
-            /* "КОРРЕКЦИЯ ФИГУРЫ" */
-            order: 3;
-        }
-    
-        .header__menu-item:nth-child(8) {
-            /* "ЖУРНАЛ" */
-           display: none;
+    .header.open .header__menu-item:nth-child(10) {
+        /* "КОНТАКТЫ" */
+        /* order: 1; */
+        display: none;
+    }
 
-        }
-    
-        .header__menu-item:nth-child(9) {
-            /* "СЕРТИФИКАТЫ" */
-            display: none;    
-        }
+    .header.open .header__menu-item:nth-child(1) {
+        /* "ВСЕ УСЛУГИ" */
+        /* order: 2; */
+        display: none;
+    }
 
+    .header.open .header__menu-item:nth-child(2) {
+        /* "О ЦЕНТРЕ" */
+        order: 6;
+    }
+
+    .header.open .header__menu-item:nth-child(3) {
+        /* "КОСМЕТОЛОГИЯ" */
+        order: 4;
+    }
+
+    .header.open .header__menu-item:nth-child(4) {
+        /* "SPA & THAI" */
+        /* order: 5; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(5) {
+        /* "ВЕЛНЕСС-ТЕРАПИЯ" */
+        order: 2;
+    }
+
+    .header.open .header__menu-item:nth-child(6) {
+        /* "SPA & РЕЛАКС" */
+        order: 1;
+    }
+
+    .header.open .header__menu-item:nth-child(7) {
+        /* "КОРРЕКЦИЯ ФИГУРЫ" */
+        order: 3;
+    }
+
+    .header.open .header__menu-item:nth-child(8) {
+        /* "ЖУРНАЛ" */
+        display: none;
+
+    }
+
+    .header.open .header__menu-item:nth-child(9) {
+        /* "СЕРТИФИКАТЫ" */
+        display: none;
+    }
 }
 
 
 
 @media (min-width: 768px) and (max-width: 900px) {
 
+    .header {
+        width: 100%;
+        max-width: 900px;
+        position: relative;
+        background-color: burlywood;
+    }
+
+    .header__social-link-wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4.02145px 12px;
+        gap: 20px;
+        width: 44px;
+        height: 36px;
+        border-radius: 90.4826px;
+    }
+
     .stroke {
         display: none;
     }
 
     .header__top {
-        border-bottom: 3px solid var(--background-white-rgba);
+        border-bottom: 3px solid var(--background-border-rgba);
     }
 
     .header__source {
@@ -900,12 +936,70 @@ html {
         display: none;
     }
 
-    .header__bottom {
-        display: none;
-    }
-
     .burger-btn {
         display: block;
+    }
+
+    .header__bottom {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .header__nav {
+        position: fixed;
+        right: 0;
+        visibility: hidden;
+        right: -100%;
+        z-index: 5;
+        margin: 0 auto;
+        transition: transform 0.5s ease, visibility 0.5s ease;
+        will-change: transfrom;
+        width: 100%;
+        max-width: 900px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 48px;
+    }
+
+    .header.open .header__nav {
+        top: 104px;
+        display: flex;
+        visibility: visible;
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 1000;
+        background-color: #FAF5F0;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    .header.open .header__nav .header__menu-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto;
+    }
+
+    .header.open .header__nav .header__menu-item {
+        background: #FAF5F0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0px;
+        gap: 8px;
+        width: 350px;
+        border-bottom: 1px solid rgba(172, 135, 62, 0.2);
+    }
+
+    .header.open .header__nav .header__menu-link {
+        color: #AE8F78;
     }
 
     .header__yandex-rating {
@@ -919,9 +1013,70 @@ html {
     .main__hero-caption {
         font-size: 4rem;
     }
+
+    .header.open .header__menu-item:nth-child(10) {
+        /* "КОНТАКТЫ" */
+        /* order: 1; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(1) {
+        /* "ВСЕ УСЛУГИ" */
+        /* order: 2; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(2) {
+        /* "О ЦЕНТРЕ" */
+        order: 6;
+    }
+
+    .header.open .header__menu-item:nth-child(3) {
+        /* "КОСМЕТОЛОГИЯ" */
+        order: 4;
+    }
+
+    .header.open .header__menu-item:nth-child(4) {
+        /* "SPA & THAI" */
+        /* order: 5; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(5) {
+        /* "ВЕЛНЕСС-ТЕРАПИЯ" */
+        order: 2;
+    }
+
+    .header.open .header__menu-item:nth-child(6) {
+        /* "SPA & РЕЛАКС" */
+        order: 1;
+    }
+
+    .header.open .header__menu-item:nth-child(7) {
+        /* "КОРРЕКЦИЯ ФИГУРЫ" */
+        order: 3;
+    }
+
+    .header.open .header__menu-item:nth-child(8) {
+        /* "ЖУРНАЛ" */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(9) {
+        /* "СЕРТИФИКАТЫ" */
+        display: none;
+    }
+
 }
 
 @media (min-width: 381px) and (max-width: 768px) {
+
+    .header {
+        width: 100%;
+        max-width: 768px;
+        position: relative;
+        padding: 10px;
+    }
 
     .stroke {
         display: none;
@@ -940,6 +1095,136 @@ html {
         border-radius: 90.4826px;
     }
 
+    .header__top {
+        border-bottom: 3px solid var(--background-border-rgba);
+    }
+
+    .header__source {
+        display: none;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .header__bottom {
+        width: 100%;
+        max-width: 768px;
+    }
+
+    .header__nav {
+        position: fixed;
+        right: 0;
+        visibility: hidden;
+        right: -100%;
+        z-index: 5;
+        margin: 0 auto;
+        transition: transform 0.5s ease, visibility 0.5s ease;
+        will-change: transfrom;
+        width: 100%;
+        max-width: 768px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 48px;
+    }
+
+    .header.open .header__nav {
+        top: 104px;
+        display: flex;
+        visibility: visible;
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 1000;
+        background-color: #FAF5F0;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    .header.open .header__nav .header__menu-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto;
+    }
+
+    .header.open .header__nav .header__menu-item {
+        background: #FAF5F0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0px;
+        gap: 8px;
+        width: 350px;
+        border-bottom: 1px solid rgba(172, 135, 62, 0.2);
+    }
+
+    .header.open .header__nav .header__menu-link {
+        color: #AE8F78;
+    }
+
+    .header.open .header__menu-item:nth-child(10) {
+        /* "КОНТАКТЫ" */
+        /* order: 1; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(1) {
+        /* "ВСЕ УСЛУГИ" */
+        /* order: 2; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(2) {
+        /* "О ЦЕНТРЕ" */
+        order: 6;
+    }
+
+    .header.open .header__menu-item:nth-child(3) {
+        /* "КОСМЕТОЛОГИЯ" */
+        order: 4;
+    }
+
+    .header.open .header__menu-item:nth-child(4) {
+        /* "SPA & THAI" */
+        /* order: 5; */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(5) {
+        /* "ВЕЛНЕСС-ТЕРАПИЯ" */
+        order: 2;
+    }
+
+    .header.open .header__menu-item:nth-child(6) {
+        /* "SPA & РЕЛАКС" */
+        order: 1;
+    }
+
+    .header.open .header__menu-item:nth-child(7) {
+        /* "КОРРЕКЦИЯ ФИГУРЫ" */
+        order: 3;
+    }
+
+    .header.open .header__menu-item:nth-child(8) {
+        /* "ЖУРНАЛ" */
+        display: none;
+    }
+
+    .header.open .header__menu-item:nth-child(9) {
+        /* "СЕРТИФИКАТЫ" */
+        display: none;
+    }
 
     .main__hero-caption {
         max-width: 320px;
@@ -950,7 +1235,7 @@ html {
         letter-spacing: -0.02em;
     }
 
-    .main__hero-subcaprion {
+    .main__hero-subcaption {
         width: 300px;
         max-width: 300px;
         font-size: 16px;
@@ -960,10 +1245,6 @@ html {
 
     .header__logo {
         margin-left: 50px;
-    }
-
-    .header {
-        padding: 10px;
     }
 
     .main {
@@ -978,78 +1259,12 @@ html {
         display: none;
     }
 
-    .header__bottom {
-        display: none;
-    }
-
-    .burger-btn {
-        display: block;
-    }
-
     .header__yandex-rating {
         display: none;
     }
 
     .header__appointment-btn {
         display: none;
-    }
-
-    .header__nav {
-        position: fixed;
-        right: 0;
-        visibility: hidden;
-        right: -100%;
-        top: 4rem;
-        z-index: 2000;
-        max-width: 768px;
-        width: 100%;
-        background-color: white;
-        border: 1px solid white;
-        margin: 0 auto;
-        transition: transform 0.5s ease, visibility 0.5s ease;
-        will-change: transfrom;
-        padding-bottom: 60px;
-        width: 100%;
-        height: 100vh;
-        height: calc(100vh - 4rem);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header.open .header__bottom {
-        display: flex;
-        visibility: visible;
-        transform: translateX(-100%);
-    }
-
-    .header.open .header__nav {
-        display: flex;
-        visibility: visible;
-        transform: translateX(-100%);
-        position: absolute;
-        z-index: 1000;
-    }
-
-    .header__menu-list {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin: 0 auto;
-    }
-
-    .header__menu-link {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 152%;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #181C29;
-        transition: color 0.5s ease;
     }
 
     body.menu-open {
