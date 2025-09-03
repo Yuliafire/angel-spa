@@ -698,7 +698,6 @@ html {
     border: none;
     outline: none;
     cursor: pointer;
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -745,12 +744,14 @@ html {
 
 @media (min-width: 901px) and (max-width: 1350px) {
 
-    .header__top {
-        border-bottom: 1px solid var(--background-border-rgba);
+    .header {
+        width: 100%;
+        max-width: 1350px;
+        position: relative;
     }
 
-    .header__bottom {
-        display: none;
+    .header__top {
+        border-bottom: 1px solid var(--background-border-rgba);
     }
 
     .header__contacts {
@@ -764,7 +765,121 @@ html {
     .header__source {
         display: none;
     }
+
+    .header__bottom {
+        width: 100%;
+        max-width: 1350px;
+    }
+
+    .header__nav {
+        position: fixed;
+        right: 0;
+        visibility: hidden;
+        /* right: -100%; */
+        top: 4rem;
+        z-index: 2000;
+        margin: 0 auto;
+        transition: transform 0.5s ease, visibility 0.5s ease;
+        will-change: transfrom;
+        width: 100%;
+        max-width: 1350px;
+        height: calc(100vh - 4rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 48px;
+    }
+
+    .header.open .header__nav {
+        top: 104px;
+        display: flex;
+        visibility: visible;
+        /* transform: translateX(-100%); */
+        position: absolute;
+        z-index: 1000;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-white);
+    }
+
+    .header.open .header__nav .header__menu-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto;
+    }
+
+    .header.open .header__nav .header__menu-link {
+        color: black;
+    }
+
+        .header__menu-list {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            width: 100%;
+        }
+    
+        .header__menu-item:nth-child(10) {
+            /* "КОНТАКТЫ" */
+            /* order: 1; */
+            display: none;
+        }
+    
+        .header__menu-item:nth-child(1) {
+            /* "ВСЕ УСЛУГИ" */
+            /* order: 2; */
+
+            display: none;
+        }
+    
+        .header__menu-item:nth-child(2) {
+            /* "О ЦЕНТРЕ" */
+            order: 6;
+        }
+    
+        .header__menu-item:nth-child(3) {
+            /* "КОСМЕТОЛОГИЯ" */
+            order: 4;
+        }
+    
+        .header__menu-item:nth-child(4) {
+            /* "SPA & THAI" */
+            /* order: 5; */
+            display: none;
+        }
+    
+        .header__menu-item:nth-child(5) {
+            /* "ВЕЛНЕСС-ТЕРАПИЯ" */
+            order: 2;
+        }
+    
+        .header__menu-item:nth-child(6) {
+            /* "SPA & РЕЛАКС" */
+            order: 1;
+        }
+    
+        .header__menu-item:nth-child(7) {
+            /* "КОРРЕКЦИЯ ФИГУРЫ" */
+            order: 3;
+        }
+    
+        .header__menu-item:nth-child(8) {
+            /* "ЖУРНАЛ" */
+           display: none;
+
+        }
+    
+        .header__menu-item:nth-child(9) {
+            /* "СЕРТИФИКАТЫ" */
+            display: none;    
+        }
+
 }
+
 
 
 @media (min-width: 768px) and (max-width: 900px) {
@@ -879,7 +994,7 @@ html {
         display: none;
     }
 
-    .header__menu {
+    .header__nav {
         position: fixed;
         right: 0;
         visibility: hidden;
@@ -903,13 +1018,21 @@ html {
         align-items: center;
     }
 
-    .header.open .header__menu {
+    .header.open .header__bottom {
         display: flex;
         visibility: visible;
         transform: translateX(-100%);
     }
 
-    .menu__list {
+    .header.open .header__nav {
+        display: flex;
+        visibility: visible;
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .header__menu-list {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -917,13 +1040,12 @@ html {
         margin: 0 auto;
     }
 
-    .menu__link {
+    .header__menu-link {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
         font-size: 24px;
         line-height: 152%;
-        /* or 36px */
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: #181C29;
