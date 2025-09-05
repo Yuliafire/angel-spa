@@ -794,6 +794,11 @@ html {
         position: relative;
     }
 
+    .header__yandex-rating {
+        position: absolute;
+        top: 170px;
+    }
+
     .header.open {
         background: #FAF5F0;
     }
@@ -971,6 +976,14 @@ html {
     .header.open .header__menu-item:nth-child(9) {
         display: none;
     }
+
+    .main__hero {
+        margin-top: 100px;
+    }
+
+    .header__logo {
+        margin-left: 265px;
+    }
 }
 
 
@@ -982,10 +995,19 @@ html {
 
 @media (min-width: 768px) and (max-width: 900px) {
 
+    .main__hero {
+        margin-top: 100px;
+    }
+
     .header {
         width: 100%;
         max-width: 900px;
         position: relative;
+    }
+
+    .header__yandex-rating {
+        position: absolute;
+        top: 170px;
     }
 
     .header.open {
@@ -1115,10 +1137,6 @@ html {
         color: #AE8F78;
     }
 
-    .header__yandex-rating {
-        display: none;
-    }
-
     .header__appointment-btn {
         display: none;
     }
@@ -1182,6 +1200,15 @@ html {
         padding: 10px;
     }
 
+    .header__yandex-rating {
+        position: absolute;
+        top: 170px;
+    }
+
+    .main__hero {
+        margin-top: 100px;
+    }
+
     .header.open {
         background: #FAF5F0;
     }
@@ -1378,10 +1405,6 @@ html {
     }
 
     .header__contacts {
-        display: none;
-    }
-
-    .header__yandex-rating {
         display: none;
     }
 
@@ -1410,6 +1433,11 @@ html {
         background: #FAF5F0;
     }
 
+    .header__yandex-rating {
+        position: absolute;
+        top: 170px;
+    }
+
     .header.open .header__top {
         border-bottom: 1px solid rgba(172, 135, 62, 0.2);
     }
@@ -1601,8 +1629,8 @@ html {
         display: none;
     }
 
-    .header__yandex-rating {
-        display: none;
+    .main__hero {
+        margin-top: 100px;
     }
 
     .header__appointment-btn {
