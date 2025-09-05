@@ -15,10 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
             link.addEventListener("click", (event) => {
                 event.preventDefault();
                 const targetUrl = link.getAttribute("href");
-    //    
+        
                 document.querySelector(".header").classList.remove("open");
-                document.body.classList.remove("menu-open");
-    //    
+                document.body.classList.remove("menu-open");   
                 setTimeout(() => {
                     window.location.href = targetUrl;
                 }, 300);
