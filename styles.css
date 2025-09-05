@@ -362,6 +362,7 @@ html {
     white-space: nowrap;
     text-overflow: ellipsis;
     transition: all ease 0.5s;
+    cursor: pointer;
 }
 
 .main {
@@ -798,6 +799,14 @@ html {
     }
 
     .header.open .header__logo path {
+        fill: var(--color-black);
+    }
+
+    .header.open .header__logo g rect {
+        fill: #000000 !important;
+    }
+
+    .header.open .header__logo path {
         fill: black;
     }
 
@@ -881,7 +890,6 @@ html {
         padding: 0px;
         gap: 48px;
         min-height: 100vh;
-        /* margin-top: 34px; */
     }
 
     .header.open .header__nav {
@@ -965,6 +973,13 @@ html {
     }
 }
 
+
+@media (min-width: 901px) and (max-width: 1000px) {
+    .segmented-scroll {
+        margin-top: 20%;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 900px) {
 
     .header {
@@ -975,6 +990,14 @@ html {
 
     .header.open {
         background: #FAF5F0;
+    }
+
+    .header.open .header__logo path {
+        fill: var(--color-black);
+    }
+
+    .header.open .header__logo g rect {
+        fill: #000000 !important;
     }
 
     .header.open .header__logo path {
@@ -1052,7 +1075,6 @@ html {
         padding: 0px;
         gap: 48px;
         min-height: 100vh;
-        /* margin-top: 34px; */
     }
 
     .header.open .header__nav {
@@ -1145,6 +1167,10 @@ html {
     .header.open .header__menu-item:nth-child(9) {
         display: none;
     }
+
+    .segmented-scroll {
+        margin-top: 20%;
+    }
 }
 
 @media (min-width: 381px) and (max-width: 768px) {
@@ -1158,6 +1184,14 @@ html {
 
     .header.open {
         background: #FAF5F0;
+    }
+
+    .header.open .header__logo path {
+        fill: var(--color-black);
+    }
+
+    .header.open .header__logo g rect {
+        fill: #000000 !important;
     }
 
     .header.open .header__top {
@@ -1357,6 +1391,10 @@ html {
 
     body.menu-open {
         overflow: hidden;
+    }
+
+    .segmented-scroll {
+        margin-top: 20%;
     }
 }
 
@@ -1380,6 +1418,10 @@ html {
         fill: var(--color-black);
     }
 
+    .header.open .header__logo g rect {
+        fill: #000000 !important;
+    }
+
     .stroke {
         display: none;
     }
@@ -1569,5 +1611,9 @@ html {
 
     body.menu-open {
         overflow: hidden;
+    }
+
+    .segmented-scroll {
+        margin-top: 20%;
     }
 }

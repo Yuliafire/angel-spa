@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.toggle("menu-open");
         });
        
-        // document.querySelectorAll(".header__menu-link").forEach((link) => {
-            // link.addEventListener("click", (event) => {
-                // event.preventDefault();
-                // const targetUrl = link.getAttribute("href");
-       
-                // document.querySelector(".header").classList.remove("open");
-                // document.body.classList.remove("menu-open");
-       
-                // setTimeout(() => {
-                    // window.location.href = targetUrl;
-                // }, 300);
-            // });
-        // });
+        document.querySelectorAll(".header__menu-link").forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const targetUrl = link.getAttribute("href");
+    //    
+                document.querySelector(".header").classList.remove("open");
+                document.body.classList.remove("menu-open");
+    //    
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 300);
+            });
+        });
 
             
     const cards = document.querySelectorAll('.card');
@@ -175,10 +175,5 @@ document.addEventListener('DOMContentLoaded', function () {
             updateActiveSegment(index);
         }
     });
- 
-
-    
-            
-
 });
         
