@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-
-
 
         document.querySelector(".header").classList.remove("open");
         document.body.classList.remove("menu-open");
@@ -15,35 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
        
         // document.querySelectorAll(".header__menu-link").forEach((link) => {
-            link.addEventListener("click", (event) => {
-                event.preventDefault();
-                const targetUrl = link.getAttribute("href");
+            // link.addEventListener("click", (event) => {
+                // event.preventDefault();
+                // const targetUrl = link.getAttribute("href");
        
-                document.querySelector(".header").classList.remove("open");
-                document.body.classList.remove("menu-open");
+                // document.querySelector(".header").classList.remove("open");
+                // document.body.classList.remove("menu-open");
        
-                setTimeout(() => {
-                    window.location.href = targetUrl;
-                }, 300);
-            });
+                // setTimeout(() => {
+                    // window.location.href = targetUrl;
+                // }, 300);
+            // });
         // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             const cards = document.querySelectorAll('.card');
             const slider = document.querySelector('.cards-accordion');
@@ -149,4 +129,5 @@ document.addEventListener('DOMContentLoaded', function () {
                     firstCard.getAttribute('data-service'),
                 );
             }
-        });
+});
+        
