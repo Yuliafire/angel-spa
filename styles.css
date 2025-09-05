@@ -113,8 +113,16 @@ html {
     border-bottom: 1px solid var(--background-border-rgba);
 }
 
+.header__top-center {
+    width: 74px;
+    height: 57px;
+}
+
 .header__logo {
-    margin-left: 92px;
+    margin-left: 97px;
+    width: 74px;
+    height: 57px;
+
 }
 
 .header__logo path {
@@ -852,7 +860,6 @@ html {
     .header__bottom {
         width: 100%;
         max-width: 1350px;
-
     }
 
     .header__nav {
@@ -1152,7 +1159,8 @@ html {
     }
 
     .header.open .header__top {
-        border-bottom: 1px solid red;
+
+        border-bottom: 1px solid rgba(172, 135, 62, 0.2);
     }
 
     .header.open .header__logo path {
