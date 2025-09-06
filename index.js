@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector(".header").classList.remove("open");
     document.body.classList.remove("menu-open");
-    document.querySelector(".header__bottom").style.display = "none";
-    document.querySelector(".header__nav").style.display = "none";
-
 
     document.getElementById("burger").addEventListener("click", () => {
         window.scrollTo({
