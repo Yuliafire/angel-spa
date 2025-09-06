@@ -1,30 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-        document.querySelector(".header").classList.remove("open");
-        document.body.classList.remove("menu-open");
-       
-        document.getElementById("burger").addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-            });
-            document.querySelector(".header").classList.toggle("open");
-            document.body.classList.toggle("menu-open");
-        });
-       
-        document.querySelectorAll(".header__menu-link").forEach((link) => {
-            link.addEventListener("click", (event) => {
-                event.preventDefault();
-                const targetUrl = link.getAttribute("href");
-        
-                document.querySelector(".header").classList.remove("open");
-                document.body.classList.remove("menu-open");   
-                setTimeout(() => {
-                    window.location.href = targetUrl;
-                }, 300);
-            });
-        });
+    document.querySelector(".header").classList.remove("open");
+    document.body.classList.remove("menu-open");
+    document.querySelector(".header__nav").style.display = "none";
 
-            
+
+    document.getElementById("burger").addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+        });
+        document.querySelector(".header").classList.toggle("open");
+        document.querySelector(".header__nav").style.display = "flex";
+        document.body.classList.toggle("menu-open");
+    });
+
+    document.querySelectorAll(".header__menu-link").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const targetUrl = link.getAttribute("href");
+
+            document.querySelector(".header").classList.remove("open");
+            document.body.classList.remove("menu-open");
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 300);
+        });
+    });
+
     const cards = document.querySelectorAll('.card');
     const slider = document.querySelector('.cards-accordion');
     const actionButton = document.getElementById('actionButton');
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (i === index) {
                 segment.classList.add('active');
                 segment.style.width = `${isMobile ? 40 : 260}px`;
-                setBeforeWidth(segment, isMobile); 
+                setBeforeWidth(segment, isMobile);
             }
         });
     }
@@ -97,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cards[index].classList.add('active');
 
         let scrollLeft = 0;
-        const gap = 4; 
+        const gap = 4;
         for (let i = 0; i < index; i++) {
             scrollLeft += cards[i].offsetWidth + gap;
         }
@@ -175,4 +177,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-        
