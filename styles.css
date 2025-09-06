@@ -173,6 +173,9 @@ html {
     margin-right: 10px;
     cursor: pointer;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__rating-block {
@@ -1004,7 +1007,19 @@ html {
     .header__logo {
         margin-left: 265px;
     }
+
+    .header__rating-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__yandex-rating {
+        width: 256px;
+    }
 }
+
 
 
 @media (min-width: 901px) and (max-width: 1000px) {
@@ -1217,6 +1232,17 @@ html {
 
     .segmented-scroll {
         margin-top: 20%;
+    }
+
+    .header__rating-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__yandex-rating {
+        width: 256px;
     }
 }
 
@@ -1457,6 +1483,17 @@ html {
     .segmented-scroll {
         margin-top: 20%;
     }
+
+    .header__rating-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__yandex-rating {
+        width: 256px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -1690,5 +1727,17 @@ html {
 
     .segmented-scroll {
         margin-top: 20%;
+    }
+
+    .header__rating-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header__yandex-rating {
+        max-width: 256px;
+        width: 256px;
     }
 }
