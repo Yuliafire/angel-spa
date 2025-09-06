@@ -452,7 +452,7 @@ html {
     line-height: 124%;
     letter-spacing: -0.01em;
     color: var(--color-white);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .main__hero-button svg {
@@ -727,6 +727,7 @@ html {
     .header__appointment-btn:hover {
         background: linear-gradient(180deg, var(--background-hover-gradient-start) -66.86%, var(--background-hover-gradient-end) 180.08%);
         font-weight: bold;
+        transition: all 0.5s ease;
     }
 
     .header__menu-link:hover {
