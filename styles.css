@@ -391,11 +391,12 @@ html {
 }
 
 .main__hero-content {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 25px;
+    gap: 0px;
 }
 
 .main__hero-caption {
@@ -416,12 +417,12 @@ html {
     font-size: 18px;
     line-height: 140%;
     letter-spacing: -0.01em;
-    font-feature-settings: "ss01" on;
     color: var(--color-white);
+    margin-top: -15px;
 }
 
 .main__hero-button {
-    margin-top: 5px;
+    margin-top: 30px;
     text-decoration: none;
     background-color: var(--color-gold);
     border: none;
@@ -478,7 +479,7 @@ html {
 
 .stroke {
     position: absolute;
-    top: 195px;
+    top: 245px;
     left: 665px;
     width: 100%;
     height: 100%;
