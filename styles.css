@@ -479,7 +479,6 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    margin-left: 50px;
 }
 
 .stroke {
@@ -503,7 +502,6 @@ html {
     align-self: center;
     justify-content: center;
     align-content: center;
-    margin-left: -55px;
 }
 
 .cards-accordion {
@@ -1193,7 +1191,6 @@ html {
         font-size: 4rem;
     }
 
-
     .header.open .header__menu-item:nth-child(10) {
         display: none;
     }
@@ -1254,9 +1251,9 @@ html {
 
     .main__hero-container {
         padding-top: 10px;
-            padding-left: 20px;
-            padding-right: 20px;   
-        }
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .header {
         width: 100%;
@@ -1267,6 +1264,7 @@ html {
 
     .header__top {
         height: 70px;
+        /* top: 104px; */
     }
 
     .header__yandex-rating {
@@ -1292,6 +1290,7 @@ html {
 
     .header.open .header__top {
         border-bottom: 1px solid rgba(172, 135, 62, 0.2);
+        margin-top: 12px;
     }
 
     .header.open .header__logo path {
