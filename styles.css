@@ -372,7 +372,7 @@ html {
     transition: all ease 0.5s;
 }
 
-.main {
+.main__hero {
     display: flex;
     align-items: flex-start;
     padding: 40px 16px;
@@ -389,16 +389,16 @@ html {
     max-height: calc(100vh -194px);
     position: relative;
     z-index: 10;
-    padding: 16px 40px;
+    padding: 40px 23px;
     gap: 20px;
 }
 
 .main__hero-content {
-    margin-top: -40px;
+    margin-top: -105px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    /* padding: 0px; */
     gap: 0px;
 }
 
@@ -422,6 +422,7 @@ html {
     letter-spacing: -0.01em;
     color: var(--color-white);
     margin-top: -15px;
+    max-width: 500px;
 }
 
 .main__hero-button {
@@ -478,12 +479,13 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 0px;
+    margin-left: 50px;
 }
 
 .stroke {
     position: absolute;
-    top: 195px;
-    left: 665px;
+    top: 155px;
+    left: 650px;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -499,7 +501,9 @@ html {
     left: calc(50% - 1002px/2);
     margin-top: 52px;
     align-self: center;
+    justify-content: center;
     align-content: center;
+    margin-left: -55px;
 }
 
 .cards-accordion {
@@ -1114,7 +1118,6 @@ html {
         max-width: 900px;
     }
 
-
     .header__nav {
         position: fixed;
         top: 104px;
@@ -1247,7 +1250,13 @@ html {
     }
 }
 
-@media (min-width: 381px) and (max-width: 768px) {
+@media (min-width: 381px) and (max-width: 767px) {
+
+    .main__hero-container {
+        padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;   
+        }
 
     .header {
         width: 100%;
@@ -1256,13 +1265,17 @@ html {
         padding: 10px;
     }
 
+    .header__top {
+        height: 70px;
+    }
+
     .header__yandex-rating {
         position: absolute;
-        top: 170px;
+        top: 125px;
     }
 
     .main__hero {
-        margin-top: 100px;
+        margin-top: 165px;
     }
 
     .header.open {
@@ -1447,22 +1460,46 @@ html {
         font-size: 44px;
         line-height: 84%;
         letter-spacing: -0.02em;
+        font-family: 'GT Eesti Pro Text';
+        font-style: normal;
+        font-weight: 375;
+        font-size: 44px;
+        line-height: 84%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
     }
 
     .main__hero-subcaption {
         width: 300px;
-        max-width: 300px;
         font-size: 16px;
         line-height: 140%;
         letter-spacing: -0.01em;
+        text-align: left;
+        width: 320px;
+        margin-top: -8px;
+    }
+
+    .main__hero-button {
+        margin-top: 25px;
+        width: 229px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 124%;
     }
 
     .header__logo {
         margin-left: 50px;
     }
 
-    .main {
-        padding: 10px;
+    .main__hero {
+        padding: 0px;
+        box-sizing: border-box;
+        align-items: flex-start;
     }
 
     .header__source {
@@ -1493,7 +1530,10 @@ html {
     }
 
     .header__yandex-rating {
-        width: 256px;
+        width: 264px;
+        height: 35px;
+        margin-top: 5px;
+        margin-left: 3px;
     }
 }
 
@@ -1740,5 +1780,18 @@ html {
     .header__yandex-rating {
         max-width: 256px;
         width: 256px;
+    }
+
+    .main__hero-button {
+        margin-top: 25px;
+        width: 229px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 124%;
     }
 }
