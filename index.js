@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector(".header").classList.remove("open");
     document.body.classList.remove("menu-open");
+    document.querySelector(".header__bottom").style.display = "none";
     document.querySelector(".header__nav").style.display = "none";
 
 
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             top: 0,
         });
         document.querySelector(".header").classList.toggle("open");
+        document.querySelector(".header__bottom").style.display = "flex";
         document.querySelector(".header__nav").style.display = "flex";
         document.body.classList.toggle("menu-open");
     });
