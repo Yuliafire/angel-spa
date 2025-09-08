@@ -25,12 +25,6 @@ Welcome to the **Ангел SPA** project, a premium beauty salon website based 
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- **Fonts**: 
-  - "KyivType Sans" (primary font)
-  - "Golos Text" (secondary font)
-  - "GT Eesti Pro Text" (tertiary font for hero caption)
-
-## Setup Instructions
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, etc.)
